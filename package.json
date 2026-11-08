@@ -1,0 +1,32 @@
+{
+  "name": "pompon-cleaning",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Помпон — шаблон веб-приложения для выездной химчистки мягкой мебели (PWA, 3D, кабинет владельца, PostgreSQL)",
+  "license": "SEE LICENSE IN LICENSES.md",
+  "type": "module",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "models": "tsx scripts/build-models.ts",
+    "build": "node scripts/build.mjs",
+    "start": "node dist/server.js",
+    "dev": "node scripts/build.mjs && node --env-file=.env dist/server.js",
+    "db:migrate": "node --env-file=.env scripts/migrate.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "e2e": "python3 tests/e2e.py"
+  },
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "sharp": "0.35.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "esbuild": "0.28.2",
+    "tsx": "4.23.12",
+    "typescript": "6.0.3"
+  }
+}

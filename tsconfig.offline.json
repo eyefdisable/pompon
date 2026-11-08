@@ -1,0 +1,6 @@
+{
+  "//": "Проверка типов без сети: @types/react недоступен, используется минимальная заглушка types/react-shim.d.ts. С установленными @types/react используйте tsconfig.json.",
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "types": ["node"] },
+  "include": ["src", "scripts/*.ts", "tests/*.ts", "types/react-shim.d.ts"]
+}
